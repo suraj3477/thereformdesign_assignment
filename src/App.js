@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Dashoard from "./components/Dashoard";
+import Aside from "./layouts/Aside";
+import Header from "./layouts/Header";
+import SubAside from "./layouts/SubAside";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className="flex flex-row justify-between">
+        <div className="flex flex-row">
+          <Aside />
+          <SubAside />
+        </div>
+        <Dashoard />
+      </div>
+    </>
   );
 }
-
 export default App;
